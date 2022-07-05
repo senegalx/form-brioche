@@ -21,3 +21,5 @@ yarn.lock
 
 # vscode
 .vscode
+# Local Netlify folder
+.netlify
