@@ -1,12 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Form from '../components/Form.astro';
 ---
 <Layout title="Welcome to Astro.">
 	<main>
-		<p class="logo"><img src="/logo.png" alt="Brioche Dorée"></p>
+		<h1><span class="text-gradient">Formulaire</span></h1>
+		<p class="instructions">
+			<strong>Merci !</strong> Vos coordonnées ont été bien enregistrées.
+		</p>
 		<ul role="list" class="link-card-grid">
-			<Card href="/formulaire" title="Formulaire" body="Partager vos coordonnées avec nous" />
+			<Card href="/" title="Accueil" body="Retour à l'accueil" />
 		</ul>
 	</main>
 </Layout>
@@ -45,7 +49,7 @@ import Card from '../components/Card.astro';
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
-		background: #f90000;
+		background: #08d14e;
 		padding: 1.0rem;
 		border-radius: 0.4rem;
 		color: var(--color-bg);
@@ -62,8 +66,5 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
-	}
-	.logo{
-		text-align: center;
 	}
 </style>

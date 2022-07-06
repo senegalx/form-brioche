@@ -7,19 +7,18 @@ import Form from '../components/Form.astro';
 	<main>
 		<h1><span class="text-gradient">Formulaire</span></h1>
 		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			Veuillez remplir le <code>formulaire</code> ci-dessous.
 		</p>
+		<Form href="/" title="Accueil" body="Retour à l'accueil" />
 		<ul role="list" class="link-card-grid">
 			<Card href="/" title="Accueil" body="Retour à l'accueil" />
 		</ul>
-		<Form href="/" title="Accueil" body="Retour à l'accueil" />
 	</main>
 </Layout>
 
 <style>
 	:root {
-		--astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4);
+		--astro-gradient: linear-gradient(0deg,#f90000, #ab9721);
 	}
 
 	h1 {

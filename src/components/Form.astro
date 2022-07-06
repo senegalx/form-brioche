@@ -4,19 +4,19 @@
 <div class="link-card">
     <form name="contact" method="POST" data-netlify="true">
 		<p>
-			<label>Prénom: <input type="text" name="prenom" /></label>
+			<label>Prénom <input type="text" name="prenom" required /></label>
 		</p>
 		<p>
-			<label>Nom: <input type="text" name="nom" /></label>
+			<label>Nom <input type="text" name="nom" required /></label>
 		</p>
 		<p>
-			<label>Email: <input type="email" name="email" /></label>
+			<label>Email <input type="email" name="email" required /></label>
 		</p>
 		<p>
-			<label>Téléphone: <input type="text" name="Téléphone" /></label>
+			<label>Téléphone <input type="text" name="telephone" required /></label>
 		</p>
 		<p>
-			<label>Société: <input type="text" name="Société" /></label>
+			<label>Société <input type="text" name="societe" /></label>
 		</p>
 		<p>
 			<button type="submit">Envoyer</button>
@@ -26,7 +26,7 @@
 <style>
 
 	:root {
-		--link-gradient: linear-gradient(45deg, #4F39FA, #DA62C4 30%, var(--color-border) 60%);
+		--link-gradient: linear-gradient(45deg, #f90000, #ab9721 30%, var(--color-border) 60%);
 	}
 
 	.link-card {
@@ -71,10 +71,59 @@
 	}
 
 	.link-card:is(:hover, :focus-within) h2 {
-		color: #4F39FA;
+		color: #ab9721;
 	}
 
 	.link-card:is(:hover, :focus-within) h2 span {
 		transform: translateX(2px);
 	}
+
+  label, input, button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  label:nth-of-type(2) {
+    margin-top: 12px;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+  input {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  }
+
+
+	button {
+    color: white;
+    margin-top: 20px;
+    background: #ab9721;
+    height: 40px;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
 </style>
