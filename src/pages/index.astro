@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Form from '../components/Form.astro';
 ---
-<Layout title="Welcome to Astro.">
+<Layout title="Concours | La Brioche Dorée">
 	<main>
 		<p class="logo"><img src="/logo.png" alt="Brioche Dorée"></p>
-		<ul role="list" class="link-card-grid">
-			<Card href="/formulaire" title="Formulaire" body="Partager vos coordonnées avec nous" />
-		</ul>
+		<p class="instructions">
+			Veuillez remplir le formulaire ci-dessous pour participer au jeux.
+		</p>
+		<Form href="/" title="Accueil" body="Retour à l'accueil" />
 	</main>
 </Layout>
 
@@ -45,7 +46,7 @@ import Card from '../components/Card.astro';
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
-		background: #f90000;
+		background: #4F39FA;
 		padding: 1.0rem;
 		border-radius: 0.4rem;
 		color: var(--color-bg);

@@ -1,16 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Form from '../components/Form.astro';
 ---
-<Layout title="Welcome to Astro.">
+<Layout title="Concours | La Brioche Dorée">
 	<main>
-		<h1><span class="text-gradient">Formulaire</span></h1>
+		<p class="logo"><img src="/logo.png" alt="Brioche Dorée"></p>
 		<p class="instructions">
-			<strong>Merci !</strong> Vos coordonnées ont été bien enregistrées.
+			Merci à tous d'avoir participé à notre jeu concours !
 		</p>
 		<ul role="list" class="link-card-grid">
-			<Card href="/" title="Accueil" body="Retour à l'accueil" />
+			<Card href="/" title="Jouez encore" body="Jouez pour un ami ou un parent." />
 		</ul>
 	</main>
 </Layout>
@@ -66,5 +65,8 @@ import Form from '../components/Form.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	.logo{
+		text-align: center;
 	}
 </style>

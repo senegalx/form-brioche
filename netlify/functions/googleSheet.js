@@ -19,7 +19,7 @@ const addTosheet = async(data) => {
   const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
 
   const moreRows = await sheet.addRows([
-    { horodateur, prenom, nom, email, telephone, societe }
+    { horodateur, prenom, nom, telephone, email }
   ]);
   return new Promise((resolve) => {
 
