@@ -3,9 +3,19 @@ const {GoogleSpreadsheet} = require("google-spreadsheet");
 
 const {GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SHEET} = process.env;
 
+const formatDateTime = (timestamp) => {
+  const date = new Date(timestamp);
+  const formattedDate = date.toLocaleString("fr-FR", {
+    timeZone: "Europe/Paris",
+    dateStyle: "full",
+    timeStyle: "long"
+  });
+  return formattedDate;
+};
+
 const addTosheet = async(data) => {
   const {prenom, nom, email, telephone, societe} = data.data;
-  const horodateur = data.created_at;
+  const horodateur = formatDateTime(data.created_at);
   
   const doc = new GoogleSpreadsheet(GOOGLE_SHEET);
 
